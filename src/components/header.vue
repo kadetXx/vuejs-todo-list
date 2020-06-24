@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="logo">
-      <h1>Todo List</h1>
+      <h1>TodoList</h1>
     </div>
     <div id="nav">
       <router-link to="/">Home</router-link>
@@ -25,6 +25,10 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  h1 {
+    font-size: 23px;
   }
 
   div#nav {
