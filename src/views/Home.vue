@@ -55,15 +55,16 @@ export default {
           icon: "warning",
           buttons: true,
           dangerMode: true,
+          trash: res
         })
         .then((willDelete) => {
           if (willDelete) {
-            swal("Poof! Todo deleted!", {
+            swal(`Poof! Todo deleted!`, {
               icon: "success",
             });
             this.Todos = this.Todos.filter(todo => todo.uniqueId !== uniqueId);
           } else {
-            swal("Your todo is safe!");
+            swal("Your todo is safe");
           }
         });
       })
