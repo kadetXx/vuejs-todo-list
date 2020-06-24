@@ -20,7 +20,26 @@ export default {
 
   data() {
     return {
-      Todos: [],
+      Todos: [
+        {
+          uniqueId: 1,
+          title: 'Get foodstuffs from the market',
+          completed: false,
+          id: 1
+        },
+        {
+          uniqueId: 2,
+          title: 'Install call of duty mobile',
+          completed: false,
+          id: 2
+        },
+        {
+          uniqueId: 3,
+          title: 'Visit a friend in the next street',
+          completed: false,
+          id: 3
+        }
+      ],
     }
   },
 
@@ -50,11 +69,11 @@ export default {
     },
   },
 
-  created() {
-    axios.get('https://jsonplaceholder.typicode.com/todos?_limit=3')
-    .then(res => {this.Todos = res.data})
-    .catch(err => console.log(err))
-  }
+  // created() {
+  //   axios.get('https://jsonplaceholder.typicode.com/todos?_limit=1')
+  //   .then(res => {this.Todos = res.data + this.Todos})
+  //   .catch(err => console.log(err))
+  // }
 
 };
 </script>
