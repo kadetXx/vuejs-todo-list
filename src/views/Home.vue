@@ -25,10 +25,10 @@ export default {
   },
 
   methods: {
-    deleteTodo(id) {
-      axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
+    deleteTodo(uniqueId) {
+      axios.delete(`https://jsonplaceholder.typicode.com/todos/${uniqueId}`)
       .then(res => {
-        this.Todos = this.Todos.filter(todo => todo.id !== id);
+        this.Todos = this.Todos.filter(todo => todo.uniqueId !== uniqueId);
         console.log(res.data)
       })
       .catch(err => console.log(err))
@@ -36,7 +36,7 @@ export default {
 
     addTodo(todo) {
       axios.post('https://jsonplaceholder.typicode.com/todos', {
-        id: this.Todos.length + 1,
+        uniqueId: this.Todos.length + 1,
         title: todo,
         completed: false
       })

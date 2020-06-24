@@ -3,7 +3,7 @@
     <p v-bind:class="{'is-complete' : todo.completed}">
       <input class="check" v-on:change="markComplete" type="checkbox">
       {{todo.title}}
-      <i class="fas fa-trash-alt" @click="$emit('del-todo', todo.id)"></i>
+      <i class="fas fa-trash-alt" @click="$emit('del-todo', todo.uniqueId)"></i>
     </p>
   </div>  
 </template>

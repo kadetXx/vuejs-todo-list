@@ -5,7 +5,7 @@
       Hi there, I'm kadet, a frontend developer. I started learning vue js yesterday because of some specifications for a project I am part of so I downloaded Brad Traversy's Vue js crash course and tagged along.
     </p>
     <p>
-      At first, I was so confused and started having thoughts like 'Maybe I sould have just sticked to react', 'Why do people say vue is easy and I'm still finding it so disouraging but at the end, I was ale to figure things out a lil bit and managed to complete this aimple Todo list application.
+      At first, I was so confused and started having thoughts like "Maybe I sould have just sticked to react", "Why do people say vue is easy and I'm still finding it so disouraging" but at the end, I was able to figure things out a lil bit and managed to complete this simple Todo list application.
     </p>
 
     <p>
@@ -22,7 +22,7 @@ export default {
 
 <style scoped>
   .about {
-    padding: 3% 10% 2% 2%;
+    padding: 3%;
   }
 
   h3 {
