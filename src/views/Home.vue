@@ -51,7 +51,7 @@ export default {
 
         swal({
           title: "Are you sure?",
-          text: "Once deleted, you will not be able to recover this todo!",
+          text: "You will not be able to recover this todo!",
           icon: "warning",
           buttons: true,
           dangerMode: true,
