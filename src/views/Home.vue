@@ -10,6 +10,7 @@
 import Form from '../components/form'
 import Todos from '../components/todos'
 import axios from 'axios'
+import swal from 'sweetalert';
 
 export default {
   name: "Home",
@@ -47,8 +48,24 @@ export default {
     deleteTodo(uniqueId) {
       axios.delete(`https://jsonplaceholder.typicode.com/todos/${uniqueId}`)
       .then(res => {
-        this.Todos = this.Todos.filter(todo => todo.uniqueId !== uniqueId);
-        console.log(res.data)
+
+        swal({
+          title: "Are you sure?",
+          text: "Once deleted, you will not be able to recover this todo!",
+          icon: "warning",
+          buttons: true,
+          dangerMode: true,
+        })
+        .then((willDelete) => {
+          if (willDelete) {
+            swal("Poof! Todo deleted!", {
+              icon: "success",
+            });
+            this.Todos = this.Todos.filter(todo => todo.uniqueId !== uniqueId);
+          } else {
+            swal("Your todo is safe!");
+          }
+        });
       })
       .catch(err => console.log(err))
     },
@@ -83,5 +100,6 @@ export default {
     margin: 0;
     padding: 0;
     --primary-color: #42b983;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
   }
 </style>
