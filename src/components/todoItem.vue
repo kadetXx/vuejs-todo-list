@@ -37,6 +37,6 @@ export default {
 
   .fa-trash-alt {
     float: right;
-    color: #2c3e50;
+    color: grey;
   }
 </style>

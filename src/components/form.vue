@@ -1,7 +1,7 @@
 <template>
   <div>
-    <input type="text" class="new-todo" placeholder="Add new..." v-model="newTodo">
-    <button class="add-btn" @click="$emit('addTodo', newTodo)" v-on:click="clearForm" v-bind:disabled="newTodo.length < 2">Add new</button>
+    <input type="text" class="new-todo" placeholder="Add new..." v-model="newTodo" v-on:keypress.enter="$emit('addTodo', newTodo); clearForm()">
+    <button class="add-btn" @click="$emit('addTodo', newTodo); clearForm()" v-bind:disabled="newTodo.length < 2">Add new</button>
   </div>
 </template>
 
@@ -48,7 +48,7 @@ export default {
   .add-btn {
     flex-grow: 1;
     height: 100%;
-    background-color: #2c3e50;
+    background-color: #2e7c59;
     border-radius: 2px;
     color: #fff;
     border: none;
@@ -56,7 +56,7 @@ export default {
   }
 
    .add-btn:hover {
-     background-color: #2e7c59;
+     background-color: #2c3e50;
    }
 
   .add-btn:focus {

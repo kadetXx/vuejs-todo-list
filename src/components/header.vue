@@ -5,7 +5,7 @@
     </div>
     <div id="nav">
       <router-link to="/">Home</router-link>
-      ||
+      <span class="menu-divide">||</span>
       <router-link to="/about">About</router-link>
     </div>
   </div>
@@ -20,7 +20,7 @@ export default {
 <style scoped>
   div.logo {
     padding: 2% 5%;
-    background-color: #2c3e50;
+    background-color: #2e7c59;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -32,9 +32,13 @@ export default {
   }
 
   div#nav {
-    border-bottom: 1px solid #2c3e50;
+    border-bottom: 1px solid #2e7c59;
     display: flex;
     justify-content: center;
+  }
+
+  .menu-divide {
+    color: grey;
   }
 
 </style>
