@@ -5,7 +5,7 @@
       Hi there, I'm kadet, a frontend developer. I started learning vue js yesterday because of some specifications for a project I am part of so I downloaded Brad Traversy's Vue js crash course and tagged along.
     </p>
     <p>
-      At first, I was so confused and started having thoughts like "Maybe I should have just sticked to react", "Why do people say vue is easy and I'm still finding it so disouraging" but at the end, I was able to figure things out a lil bit and managed to complete this simple Todo list application.
+      At first, I was so confused and started having thoughts like "Maybe I should have started with react", "Why do people say vue is easy and I'm still finding it so disouraging" but at the end, I was able to figure things out a lil bit and managed to complete this simple Todo list application.
     </p>
 
     <p>
